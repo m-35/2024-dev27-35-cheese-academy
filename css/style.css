@@ -1,0 +1,549 @@
+/* ここから下に記載していく */
+/* 全体幅 */
+#body{
+  width: 1200px;
+  min-width: 100%;
+}
+
+/* ヘッダーのロゴ */
+.header-logo{
+  position: left;
+  top: 0;
+  width: 100;
+  height: 100;
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color:white;
+  float: left;
+}
+/* ヘッダーのメニュー（ナビ付） */
+#nav-list{
+  list-style: none;
+  display: flex;
+  /* ↓これでメニューの位置調整 */
+  margin-left: 470;
+}
+#nav-list {
+  width: 135px;
+  text-align: center;
+  background-color: none;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+  font-size: 21px;
+  color: black;
+}
+#nav-list a {
+  position: relative;
+  padding: 40px 30px 40px;
+  font-size: 21px;
+}
+
+/* メインビジュアル部分 */
+.section01{
+  position: relative;/*親要素にrelative*/
+}
+.section01 h1{
+  position: absolute;/*重ねたい子要素にabsolute*/
+  top: 40%;
+  left: 50%;
+ -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  color:white;
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 800;
+  margin: 0!important;/*文字がずれている場合や*/
+  padding: 0!important;/*文字が折り返される場合*/
+  width: max-content;
+}
+.section01 h2{
+  position: absolute;/*重ねたい子要素にabsolute*/
+  top: 55%;
+  left: 50%;
+ -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  color:white;
+  font-size: 35px;
+  font-family:sans-serif;
+  font-weight: 500;
+  margin: 0!important;/*文字がずれている場合や*/
+  padding: 0!important;/*文字が折り返される場合*/
+  width: max-content;
+}
+
+/* アバウト部分 */
+#about{
+  color: #f4f00b;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.jpt-about{
+  color: black;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding-bottom: 60px;
+}
+
+.mes{
+  color: black;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 400;
+  padding-bottom: 40px;
+}
+
+.about-image{
+  padding-top: 60px;
+}
+
+/* コースタイトル＆文章部分 */
+#course{
+  color: black;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+/* courseブロック処理 */
+article{
+  display:flex;
+}
+.img{
+  width:60%;
+  background:#e8e8e8;
+  text-align:center;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2)
+}
+.text{
+  box-sizing:border-box;
+  width:40%;
+  padding:5%;
+  background: rgb(240, 231, 61);
+  text-align:center;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2)
+}
+
+.cap{
+  padding-top: 70px;
+  padding-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.intro{
+  line-height: 30px;
+  display: inline-block;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* news見出し部分 */
+#news{
+  color: black;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.jpt-news{
+  color: black;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding-bottom: 60px;
+}
+
+
+/* !-- ニュース欄カードのレイアウト */
+.wrap {
+  display:flex;
+  flex-flow: row;
+}
+.card {
+  padding:1em;
+  background-color:#ffd61a;
+  margin:0.5em auto;
+  width:50%;
+}
+
+/* ニュース欄のホバーアクション*/
+.card:hover {
+  opacity: 0.5;
+}
+
+/* ニュース欄カードの中身設定 */
+.card{
+  width: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2)
+}
+.card__imgframe{
+  width: 100%;
+  height: auto;
+  background: #bbb;
+  box-sizing: border-box;
+}
+.card__textbox{
+  width: 100%;
+  height: auto;
+  padding: 20px 18px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.card__textbox > * + *{
+  margin-top: 10px;
+}
+.card__date{
+  font-size: 12px;
+  line-height: 125%;
+}
+.card__overviewtext{
+  font-size: 14px;
+  line-height: 150%;
+}
+
+/* MOREボタンホバーアクションつき */
+.button {
+  font-family: gara;
+  font-size: 18px;
+  line-height: 60px;
+  letter-spacing: 0.8px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  max-width: 300px;
+  border: 1px solid #fff;
+  width: 100%;
+  display: block;
+  padding:3px 0;
+  transition: all 0.3s ease 0s;
+  background-color: #f4f00b;
+}
+.button:hover {
+background-color: #080808;
+color: white;
+border: 1px solid #333;
+}
+
+/* ACCESSタイトル部分 */
+#access{
+  color: black;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.jpt-acce{
+  color: black;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding-bottom: 60px;
+}
+/* 地図部分（保留） */
+
+/* ACCESS住所部分 */
+.adress{
+  width: 100%;
+}
+ 
+.adress th,
+.adress td {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.adress th {
+  font-weight: bold;
+  background-color: #dedede;
+}
+
+/* MOREボタン部分 */
+.more_btn{
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+/* ↓ボタンデザインは送信ボタンで行った */
+
+/* contactタイトル部分 */
+#contact{
+  color: black;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.jpt-cont{
+  color: black;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding-bottom: 60px;
+}
+.mes{
+  color: black;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 400;
+  padding-bottom: 40px;
+}
+
+/* ためし問い合わせフォーム */
+
+.Form {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+@media screen and (max-width: 480px) {
+  .Form {
+    margin-top: 40px;
+  }
+}
+.Form-Item {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+}
+.Form-Item:nth-child(5) {
+  border-bottom: 1px solid #ddd;
+}
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+}
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label.isMsg {
+    margin-top: 0;
+  }
+}
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #5bc8ac;
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
+}
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+/* 選択肢*/
+.select {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .select {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+/* 選択肢終わり */
+
+/* 以下ラジオボタン部分 */
+.box_br {
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 13em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .box_br {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+
+/* 記入欄部分 */
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+  }
+}
+
+.Form-Btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #5bc8ac;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
+}
+/* 以上問合せフォーム */
+
+/* 送信ボタンの位置 */
+.send_btn{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 140px;
+}
+/* ボタンのデザイン */
+.button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #ffd61a;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+}
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #ffd61a;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+
+/* フッター */
+#footerbg {
+  width: 100%;
+  height: 20px; 
+  text-align: center;
+  padding: 10px 10px;
+  background-color: #707070;
+}
+ #footer{
+  color: white;
+  font-size: 16px;
+}
+/* フッター終わり */
+  
